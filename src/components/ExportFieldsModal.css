@@ -1,0 +1,39 @@
+.export-fields-modal .fields-grid {
+  padding: 16px 0;
+  border: 1px solid #f0f0f0;
+  border-radius: 8px;
+  background: #fafafa;
+  margin-bottom: 16px;
+  padding: 20px;
+}
+
+.export-fields-modal .fields-grid .ant-checkbox-wrapper {
+  margin-bottom: 4px;
+}
+
+.export-fields-modal .modal-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 16px;
+  border-top: 1px solid #f0f0f0;
+}
+
+@media (max-width: 768px) {
+  .export-fields-modal .fields-grid {
+    padding: 12px;
+  }
+
+  .export-fields-modal .modal-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .export-fields-modal .modal-footer .actions {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+  }
+}

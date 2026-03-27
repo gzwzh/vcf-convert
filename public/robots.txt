@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://vcf.kunqiongai.com/sitemap.xml

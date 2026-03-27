@@ -1,0 +1,9 @@
+services:
+  vcf-converter-web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: vcf-converter-web
+    ports:
+      - "8080:80"
+    restart: unless-stopped

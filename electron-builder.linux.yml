@@ -1,0 +1,23 @@
+appId: com.kunqiong.vcf.converter.linux
+productName: VCF转换器
+directories:
+  output: dist-linux
+  buildResources: build/linux
+files:
+  - dist/**/*
+  - electron/**/*
+  - public/vcf-logo.ico
+linux:
+  target:
+    - target: AppImage
+      arch:
+        - x64
+    - target: deb
+      arch:
+        - x64
+  category: Utility
+  maintainer: kunqiong
+  executableName: vcf-converter
+  synopsis: VCF转换器 for Excel, TXT, and VCF files
+  artifactName: VCF转换器-linux-${version}-${arch}.${ext}
+  icon: build/linux

@@ -1,0 +1,167 @@
+.converter-page {
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.converter-card {
+  flex: 1;
+  min-height: 100%;
+  border-radius: 16px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e8f0;
+  background: #fff;
+}
+
+.converter-card .ant-card-head {
+  flex-shrink: 0;
+}
+
+.converter-card .ant-card-body {
+  padding: 24px 24px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.file-uploader {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.settings-panel {
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: 18px 20px;
+  margin-top: 14px;
+  border: 1px solid #f1f5f9;
+}
+
+.settings-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .converter-card .ant-card-body {
+    padding: 14px 14px 12px;
+  }
+  
+  .settings-panel {
+    padding: 12px 14px;
+    margin-top: 12px;
+  }
+
+  .settings-row {
+    gap: 12px;
+  }
+
+  .setting-item {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .right-section {
+    margin-left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.settings-row:last-child {
+  margin-bottom: 0;
+}
+
+.setting-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.setting-label {
+  color: #333;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.help-icon {
+  color: #1890ff;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.right-section {
+  margin-left: auto;
+}
+
+.convert-btn {
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%) !important;
+  border: none !important;
+  height: 48px !important;
+  padding: 0 32px !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 6px -1px rgba(99, 102, 241, 0.4) !important;
+  transition: all 0.3s !important;
+}
+
+.convert-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 15px -3px rgba(99, 102, 241, 0.5) !important;
+}
+
+.convert-btn:active {
+  transform: translateY(0);
+}
+
+.config-btn {
+  background: #6366f1 !important;
+  border-radius: 6px !important;
+}
+
+.convert-btn:disabled {
+  background: #d9d9d9 !important;
+}
+
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.checkbox-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #333;
+}
+
+.checkbox-item span {
+  user-select: none;
+}
+
+
+/* 打开文件夹按钮样式 */
+.open-folder-btn {
+  margin-left: 12px;
+  transition: all 0.3s ease;
+}
+
+.open-folder-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(24, 144, 255, 0.3);
+}
+
+.open-folder-btn:active {
+  transform: translateY(0);
+}

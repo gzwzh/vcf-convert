@@ -1,0 +1,38 @@
+.ad-banner {
+  transition: all 0.3s ease;
+}
+
+.ad-banner:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.ad-banner-header {
+  width: 100%;
+  padding: 12px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.ad-banner-sidebar {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.ad-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100px;
+}
+
+.ad-banner img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+

@@ -1,0 +1,4 @@
+姓名	电话	邮箱	公司
+张三	13800138001	zhangsan@example.com	阿里巴巴
+李四	13900139002	lisi@example.com	腾讯
+王五	13700137003	wangwu@example.com	百度

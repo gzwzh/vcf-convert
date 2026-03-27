@@ -1,0 +1,113 @@
+{
+  "name": "kunqiong-vcf-converter",
+  "private": true,
+  "version": "1.0.5",
+  "description": "VCF转换器 - Excel/TXT转VCF，VCF转Excel",
+  "author": "kunqiong",
+  "homepage": "https://github.com/kunqiong/vcf-converter",
+  "main": "electron/main.cjs",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "electron:dev": "concurrently \"vite\" \"wait-on http://localhost:5173 && electron .\"",
+    "electron:build": "vite build && electron-builder",
+    "electron:build:win": "vite build && electron-builder --win",
+    "electron:build:linux": "vite build && electron-builder --linux AppImage deb",
+    "electron:build:mac": "vite build && electron-builder --mac",
+    "electron:build:portable": "rimraf dist node_modules/.vite && vite build && electron-builder --win portable"
+  },
+  "build": {
+    "appId": "com.kunqiong.vcf.converter",
+    "productName": "VCF转换器",
+    "directories": {
+      "output": "dist-portable"
+    },
+    "files": [
+      "dist/**/*",
+      "electron/**/*",
+      "public/vcf-logo.ico"
+    ],
+    "extraResources": [
+      {
+        "from": "public/updater.exe",
+        "to": "updater.exe"
+      }
+    ],
+    "win": {
+      "target": [
+        "nsis",
+        "portable"
+      ],
+      "icon": "build-icon.ico"
+    },
+    "mac": {
+      "target": [
+        "dmg",
+        "zip"
+      ],
+      "icon": "public/鲲穹.ico",
+      "category": "public.app-category.utilities",
+      "extendInfo": {
+        "NSAppleEventsUsageDescription": "Please allow access to Apple Events.",
+        "NSCameraUsageDescription": "Please allow access to the camera.",
+        "NSMicrophoneUsageDescription": "Please allow access to the microphone."
+      }
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ],
+      "icon": "build-icon.ico",
+      "category": "Utility",
+      "maintainer": "kunqiong",
+      "executableName": "vcf-converter",
+      "synopsis": "VCF转换器 - Excel/TXT转VCF，VCF转Excel"
+     },
+     "deb": {
+      "artifactName": "VCF转换器-安装包-${version}.${ext}"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "VCF转换器",
+      "artifactName": "VCF转换器-安装版-${version}.exe",
+      "runAfterFinish": true
+    },
+    "portable": {
+      "artifactName": "VCF转换器-便携版-${version}.exe"
+    }
+  },
+  "devDependencies": {
+    "@ant-design/icons": "^6.1.0",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.1",
+    "@types/react": "^18.3.27",
+    "@types/react-dom": "^18.3.7",
+    "@types/uuid": "^10.0.0",
+    "@vitejs/plugin-react": "^4.7.0",
+    "antd": "^6.1.3",
+    "concurrently": "^9.2.1",
+    "cross-env": "^10.1.0",
+    "electron": "^39.2.7",
+    "electron-builder": "^26.0.12",
+    "jsdom": "^27.4.0",
+    "rcedit": "^5.0.2",
+    "rimraf": "^6.1.3",
+    "typescript": "~5.9.3",
+    "vite": "7.2.4",
+    "vitest": "^4.0.16",
+    "wait-on": "^9.0.3",
+    "xlsx": "^0.18.5"
+  },
+  "dependencies": {
+    "node-machine-id": "^1.1.12",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "uuid": "^13.0.0"
+  }
+}
