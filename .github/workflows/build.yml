@@ -35,11 +35,11 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           if [ "${{ matrix.os }}" == "macos-latest" ]; then
-            npm run electron:build:mac
+            npm run electron:build:mac -- --publish never
           elif [ "${{ matrix.os }}" == "ubuntu-latest" ]; then
-            npm run electron:build:linux
+            npm run electron:build:linux -- --publish never
           else
-            npm run electron:build:win
+            npm run electron:build:win -- --publish never
           fi
         shell: bash
 
