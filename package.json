@@ -47,7 +47,7 @@
         "dmg",
         "zip"
       ],
-      "icon": "public/鲲穹.ico",
+      "icon": "build/mac/icon.png",
       "category": "public.app-category.utilities",
       "extendInfo": {
         "NSAppleEventsUsageDescription": "Please allow access to Apple Events.",
@@ -60,14 +60,14 @@
         "AppImage",
         "deb"
       ],
-      "icon": "build-icon.ico",
+      "icon": "build/linux",
       "category": "Utility",
       "maintainer": "kunqiong",
       "executableName": "vcf-converter",
       "synopsis": "VCF转换器 - Excel/TXT转VCF，VCF转Excel"
-     },
-     "deb": {
-      "artifactName": "VCF转换器-安装包-${version}.${ext}"
+    },
+    "deb": {
+      "artifactName": "VCF转换器-linux-${version}.${ext}"
     },
     "nsis": {
       "oneClick": false,
